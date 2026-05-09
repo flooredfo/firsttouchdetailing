@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | First Touch Detailing Windsor</title>
+  <meta name="description" content="Transparent pricing for auto detailing services in Windsor Ontario. Packages starting from $120.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* PRICING CARDS */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px;
+    }
+    .pkg-card {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 48px 36px; position: relative;
+      transition: border-color .3s, transform .3s;
+    }
+    .pkg-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .pkg-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, #161410 0%, #131313 100%);
+    }
+    .pkg-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--black);
+      font-size: 0.64rem; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase;
+      padding: 5px 18px; white-space: nowrap;
+    }
+    .pkg-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; letter-spacing: 2px; color: var(--gold); margin-bottom: 6px; }
+    .pkg-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--text); margin-bottom: 30px; }
+    .pkg-price-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px; }
+    .pkg-from { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); }
+    .pkg-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.6rem; color: var(--white); line-height: 1; }
+    .pkg-note { font-size: 0.76rem; color: var(--grey); margin-bottom: 36px; }
+    .pkg-features { list-style: none; margin-bottom: 40px; }
+    .pkg-features li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.84rem; color: var(--text);
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+    }
+    .pkg-features li .check { color: var(--gold); font-size: 0.78rem; margin-top: 1px; flex-shrink: 0; }
+    .pkg-cta {
+      width: 100%; background: transparent; border: 1px solid var(--gold);
+      color: var(--gold); padding: 14px;
+      font-family: 'Barlow', sans-serif; font-size: 0.78rem;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      cursor: pointer; transition: background .2s, color .2s; font-weight: 500;
+    }
+    .pkg-cta:hover, .pkg-card.featured .pkg-cta { background: var(--gold); color: var(--black); }
+    .pkg-card.featured .pkg-cta:hover { background: var(--gold-light); }
+
+    /* ADD-ONS */
+    #addons { background: var(--deep); }
+    .addon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+    .addon-card {
+      background: var(--card); border: 1px solid var(--border); padding: 28px 24px;
+      transition: border-color .3s;
+    }
+    .addon-card:hover { border-color: rgba(201,168,76,0.3); }
+    .addon-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 8px; }
+    .addon-desc { font-size: 0.8rem; color: var(--text); line-height: 1.6; margin-bottom: 14px; }
+    .addon-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--gold); }
+
+    /* SIZE NOTE */
+    .size-note {
+      background: var(--card); border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 24px 28px; margin-top: 48px;
+    }
+    .size-note p { font-size: 0.86rem; color: var(--text); line-height: 1.7; }
+    .size-note strong { color: var(--gold); }
+
+    /* SIZE TABLE */
+    .size-table { width: 100%; border-collapse: collapse; margin-top: 48px; }
+    .size-table th {
+      font-size: 0.68rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gold); border-bottom: 1px solid var(--border);
+      padding: 12px 16px; text-align: left;
+    }
+    .size-table td {
+      font-size: 0.83rem; color: var(--text);
+      padding: 14px 16px; border-bottom: 1px solid var(--border);
+    }
+    .size-table tr:hover td { background: rgba(201,168,76,0.03); }
+
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .addon-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .addon-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">First<span>Touch</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <p class="page-eyebrow">Transparent Pricing</p>
+    <h1 class="page-title">Our <span class="gold">Packages</span></h1>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section>
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Choose Your Package</p>
+      <h2 class="section-title">Simple, Honest Pricing</h2>
+      <p class="section-body">All prices are starting rates and vary based on vehicle size and condition. We'll always give you an exact quote before we begin.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pkg-card reveal">
+        <div class="pkg-name">Essential</div>
+        <div class="pkg-tagline">Perfect maintenance detail</div>
+        <div class="pkg-price-row"><span class="pkg-from">from</span><div class="pkg-price">$120</div></div>
+        <p class="pkg-note">Sedan · SUV · Truck</p>
+        <ul class="pkg-features">
+          <li><span class="check">✦</span> Hand wash & dry</li>
+          <li><span class="check">✦</span> Wheel & tire clean</li>
+          <li><span class="check">✦</span> Windows inside & out</li>
+          <li><span class="check">✦</span> Interior vacuum</li>
+          <li><span class="check">✦</span> Dashboard wipe-down</li>
+          <li><span class="check">✦</span> Spray wax protection</li>
+        </ul>
+        <button class="pkg-cta" onclick="window.location.href='booking.html?service=Essential'">Book Essential</button>
+      </div>
+
+      <div class="pkg-card featured reveal" style="transition-delay:.15s">
+        <div class="pkg-badge">Most Popular</div>
+        <div class="pkg-name">Premium</div>
+        <div class="pkg-tagline">The complete transformation</div>
+        <div class="pkg-price-row"><span class="pkg-from">from</span><div class="pkg-price">$250</div></div>
+        <p class="pkg-note">Sedan · SUV · Truck</p>
+        <ul class="pkg-features">
+          <li><span class="check">✦</span> Everything in Essential</li>
+          <li><span class="check">✦</span> Clay bar treatment</li>
+          <li><span class="check">✦</span> Steam interior clean</li>
+          <li><span class="check">✦</span> Leather conditioning</li>
+          <li><span class="check">✦</span> Carnauba wax</li>
+          <li><span class="check">✦</span> Engine bay clean</li>
+          <li><span class="check">✦</span> Headlight restoration</li>
+        </ul>
+        <button class="pkg-cta" onclick="window.location.href='booking.html?service=Premium'">Book Premium</button>
+      </div>
+
+      <div class="pkg-card reveal" style="transition-delay:.3s">
+        <div class="pkg-name">Elite</div>
+        <div class="pkg-tagline">Showroom perfection, forever</div>
+        <div class="pkg-price-row"><span class="pkg-from">from</span><div class="pkg-price">$799</div></div>
+        <p class="pkg-note">Includes paint correction + ceramic coating</p>
+        <ul class="pkg-features">
+          <li><span class="check">✦</span> Everything in Premium</li>
+          <li><span class="check">✦</span> Multi-stage paint correction</li>
+          <li><span class="check">✦</span> SiO2 ceramic coating</li>
+          <li><span class="check">✦</span> 2–5 year protection warranty</li>
+          <li><span class="check">✦</span> Glass coating</li>
+          <li><span class="check">✦</span> Wheel coating</li>
+          <li><span class="check">✦</span> Full aftercare kit included</li>
+        </ul>
+        <button class="pkg-cta" onclick="window.location.href='booking.html?service=Elite'">Book Elite</button>
+      </div>
+    </div>
+
+    <div class="size-note reveal">
+      <p><strong>Note on pricing:</strong> All prices shown are starting rates for a standard sedan in good condition. SUVs and trucks are typically $20–$40 more. Vehicles in heavily soiled or neglected condition may be quoted higher. We'll always confirm the exact price with you before starting any work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section id="addons">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Customize Your Detail</p>
+      <h2 class="section-title">Add-On Services</h2>
+      <p class="section-body">Enhance any package with individual add-ons tailored to your vehicle's needs.</p>
+    </div>
+    <div class="addon-grid">
+      <div class="addon-card reveal"><div class="addon-name">Headlight Restoration</div><p class="addon-desc">Restore clarity and brightness to yellowed, oxidized headlights.</p><div class="addon-price">+$60</div></div>
+      <div class="addon-card reveal" style="transition-delay:.1s"><div class="addon-name">Engine Bay Clean</div><p class="addon-desc">Safe degreasing and detailing of the engine compartment.</p><div class="addon-price">+$80</div></div>
+      <div class="addon-card reveal" style="transition-delay:.2s"><div class="addon-name">Odour Elimination</div><p class="addon-desc">Ozone or enzyme treatment to permanently remove odours.</p><div class="addon-price">+$50</div></div>
+      <div class="addon-card reveal" style="transition-delay:.3s"><div class="addon-name">Pet Hair Removal</div><p class="addon-desc">Specialized tools to remove embedded pet hair from carpets and seats.</p><div class="addon-price">+$40</div></div>
+      <div class="addon-card reveal"><div class="addon-name">Trim Restoration</div><p class="addon-desc">Restore faded plastic and rubber trim to like-new appearance.</p><div class="addon-price">+$45</div></div>
+      <div class="addon-card reveal" style="transition-delay:.1s"><div class="addon-name">Glass Coating</div><p class="addon-desc">Hydrophobic treatment on all glass for safer night and rain driving.</p><div class="addon-price">+$80</div></div>
+      <div class="addon-card reveal" style="transition-delay:.2s"><div class="addon-name">Wheel Coating</div><p class="addon-desc">Ceramic coating on wheels for brake dust resistance.</p><div class="addon-price">+$120</div></div>
+      <div class="addon-card reveal" style="transition-delay:.3s"><div class="addon-name">Tar & Iron Removal</div><p class="addon-desc">Chemical decontamination for iron fallout and road tar.</p><div class="addon-price">+$50</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZE TABLE -->
+<section>
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Vehicle Sizing</p>
+      <h2 class="section-title">Price by Vehicle Size</h2>
+      <p class="section-body">Here's an approximate guide based on vehicle type for our most popular packages.</p>
+    </div>
+    <table class="size-table reveal" style="transition-delay:.1s">
+      <thead>
+        <tr>
+          <th>Vehicle Type</th>
+          <th>Essential</th>
+          <th>Premium Full Detail</th>
+          <th>Elite Ceramic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sedan / Coupe</td><td>$120</td><td>$250</td><td>$799</td></tr>
+        <tr><td>SUV / Crossover</td><td>$140</td><td>$280</td><td>$899</td></tr>
+        <tr><td>Truck / Full-Size Van</td><td>$160</td><td>$320</td><td>$999</td></tr>
+        <tr><td>Exotic / Luxury</td><td>Custom</td><td>Custom</td><td>Custom</td></tr>
+      </tbody>
+    </table>
+    <div style="text-align:center;margin-top:60px" class="reveal">
+      <p style="font-size:0.86rem;color:var(--grey);margin-bottom:28px">Not sure which package is right for your vehicle? Get in touch and we'll recommend the best option.</p>
+      <a href="booking.html" class="btn-primary">Book an Appointment</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-logo">First<span>Touch</span></div><p class="footer-desc">Windsor's premier auto detailing studio. Serving Windsor, LaSalle, Tecumseh, and all of Essex County.</p></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Exterior Detail</a></li><li><a href="services.html">Interior Detail</a></li><li><a href="services.html">Paint Correction</a></li><li><a href="services.html">Ceramic Coating</a></li></ul></div>
+    <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="#">Windsor, Ontario</a></li><li><a href="tel:5190000000">(519) 000-0000</a></li><li><a href="mailto:info@firsttouchdetailing.com">info@firsttouchdetailing.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 First Touch Detailing. All rights reserved.</span><span>Windsor, Ontario, Canada</span></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

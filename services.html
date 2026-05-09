@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | First Touch Detailing Windsor</title>
+  <meta name="description" content="Professional auto detailing services in Windsor Ontario — exterior, interior, paint correction, ceramic coating and mobile detailing.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 64px;
+    }
+    .service-card {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 48px 36px; position: relative; overflow: hidden;
+      transition: border-color .3s;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .4s;
+    }
+    .service-card:hover { border-color: rgba(201,168,76,0.3); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: var(--gold-dim); border: 1px solid rgba(201,168,76,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 26px;
+    }
+    .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; margin-bottom: 14px; }
+    .service-desc { font-size: 0.87rem; color: var(--text); line-height: 1.7; margin-bottom: 24px; }
+    .service-includes { list-style: none; margin-bottom: 28px; }
+    .service-includes li {
+      font-size: 0.8rem; color: var(--grey);
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .service-includes li::before { content: '—'; color: var(--gold); font-size: 0.75rem; }
+    .service-price { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); }
+    .service-price strong { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; }
+    .service-cta {
+      display: inline-block; margin-top: 20px;
+      font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .service-cta:hover { border-bottom-color: var(--gold); }
+
+    /* WHY US */
+    #why { background: var(--deep); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px; }
+    .why-item { border-top: 2px solid var(--gold); padding-top: 24px; }
+    .why-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .why-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 1px; margin-bottom: 10px; }
+    .why-desc { font-size: 0.83rem; color: var(--text); line-height: 1.65; }
+
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">First<span>Touch</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-content">
+    <p class="page-eyebrow">What We Offer</p>
+    <h1 class="page-title">Our <span class="gold">Services</span></h1>
+  </div>
+</div>
+
+<div class="badge-strip">
+  <div class="badge-track">
+    <span class="badge-item">✦ Exterior Detail</span><span class="badge-item">✦ Interior Detail</span><span class="badge-item">✦ Paint Correction</span><span class="badge-item">✦ Ceramic Coating</span><span class="badge-item">✦ Full Detail</span><span class="badge-item">✦ Mobile Service</span>
+    <span class="badge-item">✦ Exterior Detail</span><span class="badge-item">✦ Interior Detail</span><span class="badge-item">✦ Paint Correction</span><span class="badge-item">✦ Ceramic Coating</span><span class="badge-item">✦ Full Detail</span><span class="badge-item">✦ Mobile Service</span>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Professional Care</p>
+      <h2 class="section-title">Every Service, Every Detail</h2>
+      <p class="section-body">We offer a full range of professional detailing services for every need and every budget — from a quick exterior refresh to a full ceramic coating transformation.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon">🚗</div>
+        <div class="service-name">Exterior Detail</div>
+        <p class="service-desc">A thorough exterior cleanse that removes contaminants, restores deep shine, and protects your paint against the elements.</p>
+        <ul class="service-includes">
+          <li>Hand wash & foam decontamination</li>
+          <li>Clay bar treatment</li>
+          <li>Tire & wheel deep clean</li>
+          <li>Carnauba wax application</li>
+          <li>Glass cleaning & seal</li>
+          <li>Trim dressing</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$120</strong></div>
+        <a href="booking.html?service=Exterior" class="service-cta">Book This Service →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.1s">
+        <div class="service-icon">✨</div>
+        <div class="service-name">Interior Detail</div>
+        <p class="service-desc">A deep interior transformation — leaving your cabin fresh, spotless, and looking and smelling showroom-new.</p>
+        <ul class="service-includes">
+          <li>Full vacuum & compressed air blow-out</li>
+          <li>Steam cleaning & extraction</li>
+          <li>Leather cleaning & conditioning</li>
+          <li>Dashboard & trim dressing</li>
+          <li>Odour elimination treatment</li>
+          <li>Window cleaning inside</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$150</strong></div>
+        <a href="booking.html?service=Interior" class="service-cta">Book This Service →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.2s">
+        <div class="service-icon">🔬</div>
+        <div class="service-name">Paint Correction</div>
+        <p class="service-desc">Eliminate swirl marks, water spots, light scratches, and oxidation with our precise multi-stage machine polishing process.</p>
+        <ul class="service-includes">
+          <li>1, 2 or 3-stage correction options</li>
+          <li>Defect removal & surface levelling</li>
+          <li>High-gloss polish finish</li>
+          <li>Paint depth measurement</li>
+          <li>Before & after photos</li>
+          <li>Pre-coating preparation</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$350</strong></div>
+        <a href="booking.html?service=Paint+Correction" class="service-cta">Book This Service →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.1s">
+        <div class="service-icon">💎</div>
+        <div class="service-name">Ceramic Coating</div>
+        <p class="service-desc">The ultimate long-term protection. A nano SiO2 coating that bonds to your paint, creating a hard, hydrophobic shield that lasts years.</p>
+        <ul class="service-includes">
+          <li>SiO2 nano-ceramic application</li>
+          <li>Hydrophobic water-beading protection</li>
+          <li>UV & chemical resistance</li>
+          <li>2–5 year protection warranty</li>
+          <li>Full paint correction included</li>
+          <li>Aftercare kit included</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$799</strong></div>
+        <a href="booking.html?service=Ceramic+Coating" class="service-cta">Book This Service →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.2s">
+        <div class="service-icon">🏎️</div>
+        <div class="service-name">Full Detail</div>
+        <p class="service-desc">The complete package — a full interior and exterior transformation in one appointment. Our most popular single-day service.</p>
+        <ul class="service-includes">
+          <li>Full exterior detail</li>
+          <li>Full interior detail</li>
+          <li>Engine bay cleaning</li>
+          <li>Headlight restoration</li>
+          <li>Tire dressing & trim coat</li>
+          <li>Final inspection walkthrough</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$250</strong></div>
+        <a href="booking.html?service=Full+Detail" class="service-cta">Book This Service →</a>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.3s">
+        <div class="service-icon">📱</div>
+        <div class="service-name">Mobile Detailing</div>
+        <p class="service-desc">We bring the detail shop to you — driveway, workplace, or anywhere across Windsor-Essex. Same quality, ultimate convenience.</p>
+        <ul class="service-includes">
+          <li>Available throughout Windsor-Essex</li>
+          <li>Fully self-sufficient mobile setup</li>
+          <li>All services available mobile</li>
+          <li>Home, office or anywhere</li>
+          <li>Flexible scheduling available</li>
+          <li>No water hookup needed</li>
+        </ul>
+        <div class="service-price">Starting at <strong>$130</strong></div>
+        <a href="booking.html?service=Mobile+Detailing" class="service-cta">Book This Service →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">The Difference</p>
+      <h2 class="section-title">Why First Touch?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-icon">🏆</div>
+        <div class="why-title">Premium Products Only</div>
+        <p class="why-desc">We only use industry-leading brands — Gyeon, CarPro, Koch Chemie — because your vehicle deserves the best.</p>
+      </div>
+      <div class="why-item reveal" style="transition-delay:.1s">
+        <div class="why-icon">⏱️</div>
+        <div class="why-title">On Time, Every Time</div>
+        <p class="why-desc">We respect your schedule. We show up when we say we will, and we deliver when promised.</p>
+      </div>
+      <div class="why-item reveal" style="transition-delay:.2s">
+        <div class="why-icon">📸</div>
+        <div class="why-title">Before & After Photos</div>
+        <p class="why-desc">We document every job so you can see exactly what was achieved. Transparency is everything.</p>
+      </div>
+      <div class="why-item reveal" style="transition-delay:.3s">
+        <div class="why-icon">🛡️</div>
+        <div class="why-title">Satisfaction Guaranteed</div>
+        <p class="why-desc">We don't consider a job done until you're 100% happy. We stand behind every detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">First<span>Touch</span></div>
+      <p class="footer-desc">Windsor's premier auto detailing studio. Serving Windsor, LaSalle, Tecumseh, and all of Essex County.</p>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html">Exterior Detail</a></li>
+      <li><a href="services.html">Interior Detail</a></li>
+      <li><a href="services.html">Paint Correction</a></li>
+      <li><a href="services.html">Ceramic Coating</a></li>
+      <li><a href="services.html">Mobile Detailing</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Quick Links</h5><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul>
+      <li><a href="#">Windsor, Ontario</a></li>
+      <li><a href="tel:5190000000">(519) 000-0000</a></li>
+      <li><a href="mailto:info@firsttouchdetailing.com">info@firsttouchdetailing.com</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 First Touch Detailing. All rights reserved.</span>
+    <span>Windsor, Ontario, Canada</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
