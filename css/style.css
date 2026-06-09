@@ -53,11 +53,18 @@ nav.scrolled {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.65rem;
   letter-spacing: 3px;
   color: var(--navy);
   text-decoration: none;
+}
+.nav-logo img {
+  display: block;
+  height: 42px;
+  width: auto;
 }
 .nav-logo span { color: var(--blue); }
 
