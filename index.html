@@ -37,7 +37,34 @@
       top: 50%; left: 50%; transform: translate(-50%, -50%);
       pointer-events: none;
     }
-    .hero-content { position: relative; z-index: 2; max-width: 860px; padding: 0 24px; }
+    .hero-content { position: relative; z-index: 2; max-width: 980px; padding: 0 24px; }
+    .hero-heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .hero-title-wrap {
+      min-width: 280px;
+      flex: 1 1 360px;
+    }
+    .hero-image-wrap {
+      flex: 0 0 240px;
+      max-width: 260px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+    }
+    .hero-image-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
     .hero-eyebrow {
       font-size: 0.72rem; letter-spacing: 5px; text-transform: uppercase;
       color: var(--blue-light); margin-bottom: 24px;
@@ -274,7 +301,14 @@
   <div class="hero-glow"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">Windsor, Ontario · Premium Detailing Services</p>
-    <h1 class="hero-title">First<br><span class="blue">Touch</span><br>Detailing</h1>
+    <div class="hero-heading">
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">First<br><span class="blue">Touch</span><br>Detailing</h1>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="images/FIRST TOUCH - 1.png" alt="First Touch Detailing logo">
+      </div>
+    </div>
     <p class="hero-sub">Where every vehicle becomes a work of art</p>
     <div class="hero-actions">
       <a href="booking.html" class="btn-primary">Book an Appointment</a>
