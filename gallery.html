@@ -6,6 +6,8 @@
   <title>Gallery | First Touch Detailing Windsor</title>
   <meta name="description" content="Before and after photos of our professional auto detailing work in Windsor Ontario.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <style>
     /* FILTER TABS */
     .filter-tabs {
@@ -167,103 +169,33 @@
       <button class="filter-btn" data-filter="exterior">Exterior</button>
       <button class="filter-btn" data-filter="interior">Interior</button>
       <button class="filter-btn" data-filter="correction">Paint Correction</button>
-      <button class="filter-btn" data-filter="ceramic">Ceramic Coating</button>
     </div>
 
     <!-- GALLERY GRID -->
     <div class="gallery-grid reveal" style="transition-delay:.1s">
 
       <div class="g-item wide tall" data-category="correction" onclick="openLightbox('Paint Correction – Before & After')">
-        <div class="g-placeholder g1">
-          <svg width="80" height="30" viewBox="0 0 80 30" fill="none" opacity="0.2">
-            <path d="M5 22 L14 10 Q20 4 28 4 L52 4 Q60 4 66 10 L75 22 Z" fill="#c9a84c"/>
-            <circle cx="18" cy="24" r="5" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-            <circle cx="62" cy="24" r="5" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-          </svg>
-          <span class="g-photo-hint">Paint Correction</span>
-        </div>
+        <img src="images/40246.jpg" style="width:100%;height:100%;object-fit:cover">
         <div class="g-overlay"><span class="g-label">Paint Correction</span></div>
       </div>
 
       <div class="g-item med" data-category="exterior" onclick="openLightbox('Exterior Detail – Gloss Finish')">
-        <div class="g-placeholder g2">
-          <span style="font-size:1.8rem;opacity:0.2">🚗</span>
-          <span class="g-photo-hint">Exterior Detail</span>
-        </div>
+        <img src="images/41168.jpg" style="width:100%;height:100%;object-fit:cover">
         <div class="g-overlay"><span class="g-label">Exterior Detail</span></div>
       </div>
 
       <div class="g-item small" data-category="interior" onclick="openLightbox('Interior Deep Clean')">
-        <div class="g-placeholder g3">
-          <span style="font-size:1.8rem;opacity:0.2">✨</span>
-          <span class="g-photo-hint">Interior Clean</span>
-        </div>
+        <img src="images/41177.jpg" style="width:100%;height:100%;object-fit:cover">
         <div class="g-overlay"><span class="g-label">Interior Clean</span></div>
       </div>
 
-      <div class="g-item med" data-category="ceramic" onclick="openLightbox('Ceramic Coating – Water Beading')">
-        <div class="g-placeholder g4">
-          <span style="font-size:1.8rem;opacity:0.2">💎</span>
-          <span class="g-photo-hint">Ceramic Coating</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Ceramic Coating</span></div>
-      </div>
-
       <div class="g-item small" data-category="exterior" onclick="openLightbox('Wheel Detail')">
-        <div class="g-placeholder g5">
-          <span style="font-size:1.8rem;opacity:0.2">⚙️</span>
-          <span class="g-photo-hint">Wheel Detail</span>
-        </div>
+        <img src="images/IMG_9779.jpg" style="width:100%;height:100%;object-fit:cover">
         <div class="g-overlay"><span class="g-label">Wheel Detail</span></div>
       </div>
 
-      <div class="g-item small" data-category="correction" onclick="openLightbox('Swirl Mark Removal')">
-        <div class="g-placeholder g6">
-          <span style="font-size:1.8rem;opacity:0.2">🔬</span>
-          <span class="g-photo-hint">Swirl Removal</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Swirl Removal</span></div>
       </div>
 
-      <div class="g-item med" data-category="interior" onclick="openLightbox('Leather Conditioning')">
-        <div class="g-placeholder g7">
-          <span style="font-size:1.8rem;opacity:0.2">🛋️</span>
-          <span class="g-photo-hint">Leather Detail</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Leather Detail</span></div>
-      </div>
-
-      <div class="g-item small" data-category="exterior" onclick="openLightbox('Engine Bay Clean')">
-        <div class="g-placeholder g8">
-          <span style="font-size:1.8rem;opacity:0.2">🔧</span>
-          <span class="g-photo-hint">Engine Bay</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Engine Bay</span></div>
-      </div>
-
-      <div class="g-item med" data-category="ceramic" onclick="openLightbox('Full Ceramic Package')">
-        <div class="g-placeholder g9">
-          <span style="font-size:1.8rem;opacity:0.2">🏆</span>
-          <span class="g-photo-hint">Full Ceramic</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Full Ceramic Package</span></div>
-      </div>
-
-      <div class="g-item small" data-category="exterior" onclick="openLightbox('Headlight Restoration')">
-        <div class="g-placeholder g10">
-          <span style="font-size:1.8rem;opacity:0.2">💡</span>
-          <span class="g-photo-hint">Headlights</span>
-        </div>
-        <div class="g-overlay"><span class="g-label">Headlight Restore</span></div>
-      </div>
-
-    </div>
-
-    <!-- HOW TO ADD PHOTOS -->
-    <div class="photo-guide reveal">
-      <h4>📸 How to Add Your Real Photos</h4>
-      <p>Create an <code>images/</code> folder inside your project. Save your photos there (e.g. <code>images/correction-01.jpg</code>). Then replace the placeholder <code>&lt;div class="g-placeholder"&gt;</code> blocks with <code>&lt;img src="images/your-photo.jpg" style="width:100%;height:100%;object-fit:cover"&gt;</code>. Upload to GitHub and Netlify will update automatically.</p>
-    </div>
 
   </div>
 </section>
@@ -280,7 +212,7 @@
 <footer>
   <div class="footer-inner">
     <div><div class="footer-logo">First<span>Touch</span></div><p class="footer-desc">Windsor's premier auto detailing studio. Serving Windsor, LaSalle, Tecumseh, and all of Essex County.</p></div>
-    <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Exterior Detail</a></li><li><a href="services.html">Interior Detail</a></li><li><a href="services.html">Paint Correction</a></li><li><a href="services.html">Ceramic Coating</a></li></ul></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Exterior Detail</a></li><li><a href="services.html">Interior Detail</a></li><li><a href="services.html">Paint Correction</a></li></ul></div>
     <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
     <div class="footer-col"><h5>Contact</h5><ul><li><a href="#">Windsor, Ontario</a></li><li><a href="tel:5190000000">(226) 759-6094</a></li><li><a href="mailto:firsttouch.cardetailing@gmail.com">firsttouch.cardetailing@gmail.com</a></li></ul></div>
   </div>
