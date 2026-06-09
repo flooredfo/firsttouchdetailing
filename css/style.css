@@ -65,6 +65,8 @@ nav.scrolled {
   display: block;
   height: 42px;
   width: auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .nav-logo span { color: var(--blue); }
 
