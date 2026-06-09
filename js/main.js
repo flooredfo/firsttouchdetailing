@@ -35,3 +35,4 @@ function showToast(msg, type = '') {
   t.className = 'toast' + (type ? ' ' + type : '') + ' show';
   setTimeout(() => t.className = 'toast', 4000);
 }
+
